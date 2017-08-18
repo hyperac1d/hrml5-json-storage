@@ -1,7 +1,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
   <title>Echo | Login</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
@@ -17,13 +17,11 @@
       <a href="#!" class="brand-logo">Echo</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="/">Home</a></li>
-        <li class="disabled"><a href="/list">User</a></li>
+        <li><a href="/">Logout</a></li>
       </ul>
 
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="/">Home</a></li>
-        <li class="disabled"><a href="#!">User</a></li>
+        <li><a href="/">Logout</a></li>
       </ul>
     </div>
   </nav>
@@ -32,7 +30,7 @@
   <div class="section"></div>
   <div class="section"></div>
   <div class="container">
-    <h4 class="indigo-text">List of users who have been successfully login</h4>
+    <h4 class="indigo-text">List of users who have been successfully login and register</h4>
   </div>
   <div class="section"></div>
   
@@ -50,7 +48,7 @@
           </tr>
         </thead>
         <tbody id="tblUser">
-        </tbody id="tblUser">
+        </tbody>
       </table>
     </center>
 
@@ -61,20 +59,22 @@
   </div>
   <div class="section"></div>
 
-   <script type="text/javascript">
+
+
+    <script>
           let jns_parse = JSON.parse(localStorage.getItem('json_names'));
           console.log(jns_parse);
           let html=``;
           jns_parse.map((name)=>{
       
-            html += `
-              <tr>
-                  <td><img src="http://lorempixel.com/100/100/people/"/> </td>
-                  <td>${name.username}</td>
-                  <td>${name.email}</td>
-                  <td>${name.password}</td>
-              </tr>
-            `;
+          html += `
+          <tr>
+                <td><img src="http://lorempixel.com/100/100/people/"/></td>
+                <td>${name.username}</td>
+                <td>${name.email}</td>
+                <td>${name.password}</td>
+            </tr>
+          `;
           });
           document.querySelector('#tblUser').innerHTML = html;
     </script>
@@ -83,7 +83,7 @@
   <!-- scirpt -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-  <script type="text/JavaScript" src="js/style.js"></script>
+  <script type="text/JavaScript" src="js/create.js"></script>
 </body>
 
 </html>

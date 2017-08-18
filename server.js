@@ -20,6 +20,9 @@ app.get('/list', function(req, res){
   res.sendFile(path.join(__dirname, 'views/list-user.html'));
 });
 
+app.get('/forgot-password', function(req, res){
+  res.sendFile(path.join(__dirname, 'views/forgot-password.html'));
+});
 
 
 // app.get('*', function(req, res){
